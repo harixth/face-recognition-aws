@@ -12,7 +12,7 @@ client = boto3.client('rekognition',
 
 source = []
 names = []
-folder_name = 'datasets'
+folder_name = 'database'
 
 # read input images
 for name in os.listdir(folder_name):
