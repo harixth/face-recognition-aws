@@ -12,14 +12,11 @@ client = boto3.client('rekognition',
 
 source = []
 names = []
-folder_name = 'database'
-
-# read input images
-for name in os.listdir(folder_name):
-    image = cv2.imread(folder_name + '/' + name)
-    name = os.path.splitext(name)[0] 
-    source.append(image)
-    names.append(name)
+image_name = 'rdj1.jpg'
+image = cv2.imread(image_name)
+name = image_name.split('1')[0]
+source.append(image)
+names.append(name)
 
 
 # ---------- IP Cam URL ------
